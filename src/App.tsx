@@ -473,7 +473,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-slate-800 text-white py-8 px-4">
         <div className="container mx-auto text-center">
-          <p>&copy; 2025 Manus AI. All rights reserved.</p>
+          <p>&copy; Group 2 - MLN111 </p>
         </div>
       </footer>
 
