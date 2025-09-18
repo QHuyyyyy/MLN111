@@ -122,7 +122,7 @@ function App() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-blue-100 text-blue-800 hover:bg-blue-200">
-            Triết học × Kinh doanh
+            Triết học
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
             Chủ nghĩa duy vật biện chứng:
@@ -194,7 +194,7 @@ function App() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <TrendingUp className="w-6 h-6 mr-2 text-orange-500" />
+                  <ArrowRight className="w-6 h-6 mr-2 text-orange-500" />
                   Đặc trưng
                 </CardTitle>
               </CardHeader>
@@ -209,8 +209,10 @@ function App() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
+
               <CardHeader>
-                <CardTitle>Nguyên lý về sự phát triển</CardTitle>
+                <CardTitle className="flex items-center">
+                  <TrendingUp className="w-6 h-6 mr-2 text-green-600" />Nguyên lý về sự phát triển</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
@@ -222,7 +224,8 @@ function App() {
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle>Nguyên lý về mối liên hệ phổ biến</CardTitle>
+
+                <CardTitle className="flex items-center">  <BookOpen className="w-6 h-6 mr-2 text-blue-600" />Nguyên lý về mối liên hệ phổ biến</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
@@ -292,6 +295,7 @@ function App() {
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
+
                 <CardTitle className="text-xl text-green-600">
                   3. Quy luật phủ định của phủ định
                 </CardTitle>
@@ -380,7 +384,10 @@ function App() {
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg">Mâu thuẫn ý tưởng vs thực tiễn</CardTitle>
+                    <CardTitle className="text-lg flex items-center">
+
+                      Mâu thuẫn ý tưởng vs thực tiễn
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 text-sm">
@@ -392,7 +399,10 @@ function App() {
 
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg">Mâu thuẫn tăng trưởng vs bền vững</CardTitle>
+                    <CardTitle className="text-lg flex items-center">
+
+                      Mâu thuẫn tăng trưởng vs bền vững
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 text-sm">
@@ -488,15 +498,18 @@ function App() {
 
         {isChatOpen && (
           <div
-            className={`absolute bottom-16 right-0 bg-white rounded-lg shadow-xl border border-slate-200 flex flex-col ${isMaximized ? 'w-150 h-[700px]' : 'w-80 h-96'}`}
+            className={`absolute bottom-6 bg-white rounded-lg shadow-xl border border-slate-200 flex flex-col transition-all duration-300 ${isMaximized
+              ? 'fixed inset-x-2 inset-y-2 md:absolute md:right-0 md:bottom-16 md:w-[600px] md:h-[700px] lg:w-[700px] lg:h-[750px] md:inset-auto'
+              : 'right-0 w-80 h-96 sm:w-96 sm:h-[400px]'
+              }`}
           >
             {/* Header with controls */}
             <div className="p-3 border-b border-slate-200 bg-gradient-to-r from-blue-600 to-orange-500 text-white rounded-t-lg flex items-center justify-between">
-              <div>
-                <h3 className="font-semibold text-sm">AI Trợ lý Biện chứng</h3>
-                <p className="text-xs opacity-90">Hỏi tôi về triết học và khởi nghiệp</p>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-semibold text-sm truncate">AI Trợ lý Biện chứng</h3>
+                <p className="text-xs opacity-90 truncate">Hỏi tôi về triết học và khởi nghiệp</p>
               </div>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 flex-shrink-0 ml-2">
                 <Button
                   onClick={resetChat}
                   size="sm"
@@ -528,10 +541,10 @@ function App() {
             </div>
 
             {/* Chat messages */}
-            <div className="flex-1 p-4 overflow-y-auto space-y-3">
+            <div className="flex-1 p-3 md:p-4 overflow-y-auto space-y-3">
               {chatMessages.map((message, index) => (
                 <div key={index} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[75%] p-3 rounded-lg text-sm ${message.type === 'user'
+                  <div className={`max-w-[85%] md:max-w-[75%] p-3 rounded-lg text-sm ${message.type === 'user'
                     ? 'bg-blue-600 text-white'
                     : 'bg-slate-100 text-slate-800'
                     }`}>
@@ -551,7 +564,7 @@ function App() {
               {/* Loading indicator */}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="max-w-[75%] p-3 rounded-lg text-sm bg-slate-100 text-slate-800 flex items-center space-x-2">
+                  <div className="max-w-[85%] md:max-w-[75%] p-3 rounded-lg text-sm bg-slate-100 text-slate-800 flex items-center space-x-2">
                     <Loader2 className="w-4 h-4 animate-spin" />
                     <span>Đang suy nghĩ...</span>
                   </div>
@@ -560,7 +573,7 @@ function App() {
             </div>
 
             {/* Input area */}
-            <div className="p-4 border-t border-slate-200">
+            <div className="p-3 md:p-4 border-t border-slate-200">
               <div className="flex space-x-2">
                 <input
                   type="text"
@@ -575,7 +588,7 @@ function App() {
                   onClick={handleSendMessage}
                   size="sm"
                   disabled={isLoading}
-                  className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
                 >
                   {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowRight className="w-4 h-4" />}
                 </Button>
