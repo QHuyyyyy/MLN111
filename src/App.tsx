@@ -34,7 +34,7 @@ function App() {
       setCurrentMessage('')
       setIsLoading(true)
 
-      // Thêm tin nhắn của user vào chat
+
       setChatMessages(prev => [...prev, { type: 'user', content: userMessage }])
 
       try {

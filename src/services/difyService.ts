@@ -84,12 +84,11 @@ class DifyService {
         }
     }
 
-    // Reset conversation để bắt đầu cuộc trò chuyện mới
+
     resetConversation(): void {
         this.conversationId = undefined;
     }
 
-    // Kiểm tra xem API đã được cấu hình chưa
     isConfigured(): boolean {
         return !!this.apiKey;
     }
