@@ -68,7 +68,7 @@ function App() {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-slate-800">Biện chứng & Khởi nghiệp</h1>
+              <h1 className="text-xl font-bold text-slate-800">MLN111</h1>
             </div>
 
             {/* Desktop Navigation */}
@@ -195,13 +195,12 @@ function App() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <ArrowRight className="w-6 h-6 mr-2 text-orange-500" />
-                  Đặc trưng
+                  Phép biện chứng duy vật
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Đặc trưng của phương pháp duy vật biện chứng là coi một sự vật hay một hiện tượng trong
-                  trạng thái luôn phát triển và xem xét nó trong mối quan hệ với các sự vật và hiện tượng khác.
+                  Nhấn mạnh đến phương pháp nhận thức và phương pháp luận nghiên cứu thế giới – tức là nghiên cứu các đối tượng trong trạng thái vận động, biến đổi không ngừng.
                 </p>
               </CardContent>
             </Card>
@@ -351,12 +350,12 @@ function App() {
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <CardTitle className="text-lg">Giai đoạn Thất bại</CardTitle>
-                    <CardDescription>Điểm nút và chuyển hóa tiêu cực</CardDescription>
+                    <CardDescription>Điểm nút và bước nhảy biến đổi về chất</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 text-sm">
-                      Tích lũy các yếu tố tiêu cực: thiếu vốn, sản phẩm không phù hợp, mâu thuẫn nội bộ,
-                      cạnh tranh gay gắt dẫn đến sự chuyển hóa về chất tiêu cực.
+                      Tích lũy các yếu tố lượng: thiếu vốn, sản phẩm không phù hợp, mâu thuẫn nội bộ,
+                      cạnh tranh gay gắt dẫn đến thất bại (sự chuyển hóa về chất) .
                     </p>
                   </CardContent>
                 </Card>
@@ -369,7 +368,7 @@ function App() {
                   <CardContent>
                     <p className="text-slate-600 text-sm">
                       Rút ra bài học, điều chỉnh chiến lược, tích lũy kiến thức và kinh nghiệm mới
-                      để chuẩn bị cho sự chuyển hóa tích cực.
+                      để chuẩn bị cho sự chuyển hóa về chất.
                     </p>
                   </CardContent>
                 </Card>
@@ -434,7 +433,7 @@ function App() {
 
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle className="text-lg">Phủ định lần 1</CardTitle>
+                    <CardTitle className="text-lg">Phủ định</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 text-sm">
