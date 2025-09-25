@@ -19,7 +19,7 @@ function App() {
 
   const resetChat = () => {
     setChatMessages([
-      { type: 'bot', content: 'Xin chào! Tôi có thể giúp bạn hiểu về chủ nghĩa duy vật biện chứng và ứng dụng trong khởi nghiệp. Bạn có câu hỏi gì không?' }
+      { type: 'bot', content: 'Xin chào! Tôi có thể giúp bạn về chủ nghĩa duy vật biện chứng và ứng dụng trong khởi nghiệp. Bạn có câu hỏi gì không?' }
     ])
     setCurrentMessage('')
   }
